@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/487407__phonosupf__electronic-bells.wav-082a7ff9ac409ef29b0b7cebdb0b7924.sample"
+
+[deps]
+
+source_file="res://Musicas/487407__phonosupf__electronic-bells.wav"
+dest_files=[ "res://.import/487407__phonosupf__electronic-bells.wav-082a7ff9ac409ef29b0b7cebdb0b7924.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

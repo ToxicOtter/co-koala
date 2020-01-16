@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Player/Player.gd" type="Script" id=1]
+[ext_resource path="res://Player/bala.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player/veneno.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player/Interface/Interface.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Sprites/player_2.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/player_3.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/player_1.png" type="Texture" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 25.3978, 25.2574 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[node name="Player" type="KinematicBody2D" groups=[
+"players",
+]]
+script = ExtResource( 1 )
+bala = ExtResource( 2 )
+veneno = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1.58887, -2.38329 )
+shape = SubResource( 1 )
+
+[node name="ShootTimer" type="Timer" parent="."]
+
+[node name="Interface" parent="." instance=ExtResource( 4 )]
+margin_left = -56.8799
+margin_top = -61.3842
+margin_right = -56.8799
+margin_bottom = -61.3842
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 10.0
+
+[node name="atirar_veneno" type="Timer" parent="."]
+wait_time = 15.0
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -0.397217 )
+scale = Vector2( 3, 3 )
+frames = SubResource( 2 )
+animation = "idle"
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+[connection signal="atualizar_vida" from="." to="Interface" method="_on_Player_atualizar_vida"]
+[connection signal="timeout" from="ShootTimer" to="." method="_on_ShootTimer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
+[connection signal="timeout" from="atirar_veneno" to="." method="_on_atirar_veneno_timeout"]

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/487351__patobottos__nananana.wav-89b9108a74b8933eb617cc0d574ae568.sample"
+
+[deps]
+
+source_file="res://Musicas/487351__patobottos__nananana.wav"
+dest_files=[ "res://.import/487351__patobottos__nananana.wav-89b9108a74b8933eb617cc0d574ae568.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
