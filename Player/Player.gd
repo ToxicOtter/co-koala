@@ -12,7 +12,6 @@ export (PackedScene) var veneno
 
 var andando = 0
 
-var vida_max = 100
 var vida = 500
 signal atualizar_vida(vida)
 

@@ -24,6 +24,9 @@ rect_scale = Vector2( 0.5, 0.5 )
 icon = ExtResource( 2 )
 flat = true
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Tutorial" type="Button" parent="."]
 margin_left = 813.0
@@ -31,5 +34,8 @@ margin_top = 488.0
 margin_right = 916.0
 margin_bottom = 520.0
 script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
 [connection signal="pressed" from="Tutorial" to="Tutorial" method="_on_Tutorial_pressed"]
